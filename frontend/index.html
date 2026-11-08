@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Mochiy+Pop+P+One&family=Sour+Gummy&display=swap" rel="stylesheet"/>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <title>Planner 2025</title>
+    </head>
+
+    <body>
+    <div id="container">
+        <div class="navbar">
+            <a href="index.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="search.html"><i class="fas fa-search"></i> Search</a>
+            <a href="todayTask.html"><i class="fas fa-tasks"></i> Today's Tasks</a>
+            <a href="#" onclick="Auth.logout(); return false;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <div class="navbar-user"><i class="fas fa-user"></i> <span id="navUser"></span></div>
+            <button class="addTaskButton" id="addTaskButton" onclick="openTaskForm()">Add Task</button>
+        </div>
+
+        <div class="content">
+            <div class="header"><img id="image-container" src="images/1.jpg"></div>
+            <div class="text-container">
+                <div class="quote" id="quote">"Believe in yourself. Walk your path."<br/>— "Porco Rosso", 1992.</div>
+                <div class="month-container">
+                    <div class="month_kanji" id="monthNameKanji">いちがつ</div>
+                    <div class="month" id="monthName">JANUARY</div>
+                </div>
+            </div>
+
+            <div class="planner">PLANNER</div>
+            <div class="content-wrapper">
+                <div class="todo-list">
+                    <h2>to do list</h2>
+                    <ul id="todoItems"></ul>
+                </div>
+
+                <div class="calendar-container">
+                    <table id="calendar"></table>
+                </div>
+            </div>
+
+            <button id="previousMonthButton" onclick="previousMonth()">&lt;&lt;</button>
+            <button id="nextMonthButton" onclick="nextMonth()">&gt;&gt;</button>
+
+            <div id="taskForm" style="display:none;">
+            <div class="task-form-container">
+                <h3 id="selectedDate">New Task</h3>
+                <input id="taskTitle" placeholder="Title" type="text"/>
+                <textarea id="taskDescription" placeholder="Description"></textarea>
+                <input id="taskTime" placeholder="time" type="time"/>
+
+                <div id="button-container">
+                    <button id="saveTaskButton" onclick="saveTask()">Save</button>
+                    <button onclick="cancelTask()">Cancel</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+    </body>
+</html>
