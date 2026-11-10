@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Mochiy+Pop+P+One&family=Sour+Gummy&display=swap" rel="stylesheet">
+
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+    <title>Login</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div class="navbar auth-side">
+        <div class="auth-brand">Planner</div>
+        <p class="auth-tagline">
+            Plan your days, one small task at a time.
+        </p>
+    </div>
+
+    <div class="content auth-content">
+
+        <div class="planner">LOGIN</div>
+
+        <form id="loginForm" class="auth-card" novalidate>
+
+            <div class="auth-form-content">
+                <h2>Welcome Back!</h2>
+                <p class="auth-description">
+                    Let's plan your day together.
+                </p>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email"
+                    autocomplete="email" required>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password"
+                    autocomplete="current-password" required>
+
+                <p id="authMessage" class="auth-message" role="alert"></p>
+
+                <button type="submit">Log in</button>
+
+                <p class="auth-switch">
+                    New here?
+                    <a href="signup.html">Create an account</a>
+                </p>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>
